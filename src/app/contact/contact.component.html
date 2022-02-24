@@ -1,0 +1,58 @@
+<!--
+================================================================
+; Title: Assignment 5.2 Layout and Navigation
+; Author: Professor Krasso
+; Date: 03 February 2022
+; Modified By: Gustavo Roo Gonzalez
+; Description: Using Angular Material to implement navigation,
+;              color theming, and working with flex-layout.
+================================================================
+-->
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <!-- card elevation-->
+    <mat-card class="mat-elevation-z0">
+      <!--Card title mat-icon-->
+
+      <mat-card-title class="card-title-icon">
+        <mat-icon color="primary">navigation</mat-icon>
+      </mat-card-title>
+      <br />
+
+      <!--Card with address info-->
+      <mat-card-content class="align-center">
+        <p>123 Main Street</p>
+        <p>Madrid, Spain</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex>
+    <!--Card with phone info-->
+    <mat-card class="mat-elevation-z0">
+      <mat-card-title class="card-title-icon">
+        <mat-icon color="primary">phone</mat-icon>
+      </mat-card-title>
+      <br />
+      <mat-card-content class="align-center">
+        <p>Direct: 123-456-7890</p>
+        <p>Toll-free: 1-888-123-4567</p>
+        <p>Fax: 098-765-4321</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<br /><br /><br /><br />
+<!--Additional column with website info-->
+<div fxLayout="column">
+  <p style="text-align: center">
+    Visit Boris Izaguirre online at
+    <a
+      class="attribution-link"
+      href="http://borisizaguirre.net/"
+      target="_blank"
+      >BorisIzaguirre.net</a
+    >
+  </p>
+</div>

@@ -1,0 +1,36 @@
+<!--/*
+=====================================================
+; Title: Assignment 6.2 - Input/Output Properties
+; Author: Professor Krasso
+; Date: 09 February 2022
+; Modified By: Gustavo Roo Gonzalez
+; Description: Creating forms to capture user data
+;               and output user entries
+=====================================================
+*/-->
+
+<div fxLayout="column">
+  <!--Take value from user user, pass it to the WishListComponent-->
+  <!--Call emitter/call the handler/pass in event-->
+  <app-wishlist-create
+    fxFlex
+    (addItemEmitter)="updateItemsHandler($event)"
+  ></app-wishlist-create>
+
+  <br /><br />
+  <div>
+    <!--If array of items and length > 0, output item-->
+    <mat-list fxFlex *ngIf="items && items.length > 0">
+      <!--Iterate over array-->
+      <mat-list-item *ngFor="let item of items">
+        <div mat-line>Title: {{ item.title }}</div>
+        <div mat-line>Authors: {{ item.authors }}</div>
+      </mat-list-item>
+    </mat-list>
+
+    <!--If there are no items in array, wishlist empty-->
+    <div *ngIf="!items || items.length === 0">
+      <h2 style="text-align: center">Your wishlist is empty.</h2>
+    </div>
+  </div>
+</div>

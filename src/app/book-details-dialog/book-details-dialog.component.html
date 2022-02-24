@@ -1,0 +1,36 @@
+<!--
+=====================================================
+; Title: Assignment 5.4 - Dialogs
+; Author: Professor Krasso
+; Date: 03 February 2022
+; Modified By: Gustavo Roo Gonzalez
+; Description: Creating dialog boxes to display book
+               details and button to confirm/close.
+=====================================================
+-->
+
+<div fxFlex>
+  <mat-card>
+    <!--Card-title with blue book title -->
+    <mat-card-title class="blue"> {{ book.title }}</mat-card-title>
+    <mat-card-content>
+      <!--Column with paragraphs for values of book -->
+      <div fxLayout="column" class="book-details">
+        <p>ISBN: {{ book.isbn }}</p>
+        <p>Title: {{ book.title }}</p>
+        <p>
+          Description:<br />
+          {{ book.description }}
+        </p>
+        <p>Authors: {{ book.authors.join(",") }}</p>
+      </div>
+    </mat-card-content>
+    <!-- Card-actions -->
+    <mat-card-actions>
+      <!-- button -->
+      <button mat-raised-button color="accent" matDialogClose="confirm">
+        OK
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

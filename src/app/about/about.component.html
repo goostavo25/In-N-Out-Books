@@ -1,0 +1,60 @@
+<!--
+================================================================
+; Title: Assignment 5.2 Layout and Navigation
+; Author: Professor Krasso
+; Date: 03 February 2022
+; Modified By: Gustavo Roo Gonzalez
+; Description: Using Angular Material to implement navigation,
+;              color theming, and working with flex-layout.
+================================================================
+-->
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <!--Column for image-->
+    <div fxLayout="column">
+      <!--Image-->
+      <div>
+        <img src="../assets/boris.jpeg" style="margin: 10px" />
+      </div>
+      <!--Img Attribution-->
+      <div>
+        <em>
+          Photo by Boris Izaguirre on
+          <a
+            class="attribution-link"
+            href="https://pantheon.world/profile/person/Boris_Izaguirre"
+            target="_blank"
+            >Pantheon.world</a
+          >
+        </em>
+      </div>
+    </div>
+  </div>
+  <!--Div containing information about writer-->
+  <div fxFlex>
+    <!--title-->
+    <h1 class="blue">Who is Boris Izzaguirre?</h1>
+    <!--text-->
+    <p>
+      Boris Rodolfo Izaguirre Lobo (Caracas, 29 September 1965), better known as
+      Boris Izaguirre, is a Venezuelan-Spanish writer, TV host, screenwriter,
+      journalist, and journalist showman. <br />
+      Since 2007, the English Wikipedia page of Boris Izaguirre has received
+      more than 61,474 page views. His biography is available in 20 different
+      languages on Wikipedia. Boris Izaguirre is the 5,308th most popular writer
+      (down from 4,611th in 2019), the 84th most popular biography from
+      Venezuela, and the 6th most popular Venezuelan writer.
+    </p>
+    <!--Attribution-->
+    <em>
+      Biography by:
+      <a
+        href="https://pantheon.world/profile/person/Boris_Izaguirre"
+        target="_blank"
+        class="attribution-link"
+        >Pantheon.World</a
+      >
+    </em>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<!--/*
+=====================================================
+; Title: Assignment 6.2 - Input/Output Properties
+; Author: Professor Krasso
+; Date: 09 February 2022
+; Modified By: Gustavo Roo Gonzalez
+; Description: Creating forms to capture user data
+;               and output user entries
+=====================================================
+*/-->
+
+<!--Add a mat-toolbar-->
+<mat-toolbar class="toolbar">
+  <!--Add row-->
+  <mat-toolbar-row>
+    <!-- Logo Image -->
+    <div class="logo">
+      <img src="./assets/In-N-Out books Logo.png" height="80" />
+    </div>
+
+    <div style="width: 80%">
+      <div fxLayout="row-wrap" fxLayoutAlign="end start">
+        <!--Buttons w/ Router Links for Book List, Wishlist, Contact, and About-->
+        <button mat-button routerLink="/book-list">Book List</button>
+        <button mat-button routerLink="/wishlist">Wish List</button>
+        <button mat-button routerLink="/contact">Contact</button>
+        <button mat-button routerLink="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <!--Container with card title, content-->
+    <mat-card class="main-container">
+      <!--mat-card-title, class blue, with assignment variable-->
+      <mat-card-title class="blue">
+        {{ assignment }}
+      </mat-card-title>
+      <!--Spacing between card-title and card-content-->
+      <br />
+      <br />
+      <!--Card-content-->
+      <mat-card-content>
+        <!--Router-outlet for different route information-->
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
